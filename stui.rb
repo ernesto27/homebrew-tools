@@ -5,20 +5,20 @@
 class Stui < Formula
   desc ""
   homepage "https://github.com/ernesto27/homebrew-tools"
-  version "0.0.5"
+  version "0.0.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ernesto27/stui/releases/download/v0.0.5/stui_Darwin_arm64.tar.gz"
-      sha256 "6fd96ef3d5130eed2fe58a59ff6cb7e66f5fa358e3836f573a964b29dfd61b9d"
+      url "https://github.com/ernesto27/stui/releases/download/v0.0.7/stui_Darwin_arm64.tar.gz"
+      sha256 "ea0c389337fd5785e909d809e9b6d8da4654cbb5604444799a7f3898c3a51d0e"
 
       def install
         bin.install "stui"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ernesto27/stui/releases/download/v0.0.5/stui_Darwin_x86_64.tar.gz"
-      sha256 "b7e06b6b4d1d35b11b053090da99b65dc7322cc6dd4a7b6bbc3b757deb9f3562"
+      url "https://github.com/ernesto27/stui/releases/download/v0.0.7/stui_Darwin_x86_64.tar.gz"
+      sha256 "55ba33024b063b18e157d5a14250dc8cc6474f1c94b2ef5bdfc310a9b83a2c5e"
 
       def install
         bin.install "stui"
@@ -28,16 +28,16 @@ class Stui < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ernesto27/stui/releases/download/v0.0.5/stui_Linux_arm64.tar.gz"
-      sha256 "6a4fd5286f5cea0a94c255f0f10f2b7284a8454a4a734f6bc6842355631b6e74"
+      url "https://github.com/ernesto27/stui/releases/download/v0.0.7/stui_Linux_arm64.tar.gz"
+      sha256 "29856be5ee038ec689a880927c3405e4301aba32e0f1d222ab556f4fe97cd15e"
 
       def install
         bin.install "stui"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ernesto27/stui/releases/download/v0.0.5/stui_Linux_x86_64.tar.gz"
-      sha256 "7b60de1b09cd9cf3049376a9540bba0f5243d3dbac4825e78416c6582077fcc4"
+      url "https://github.com/ernesto27/stui/releases/download/v0.0.7/stui_Linux_x86_64.tar.gz"
+      sha256 "7504ad25ed80ccc579a7dea0560615de7a1e42be8a448229fb0764e44353d34c"
 
       def install
         bin.install "stui"
