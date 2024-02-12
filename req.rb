@@ -5,20 +5,20 @@
 class Req < Formula
   desc ""
   homepage "https://github.com/ernesto27/homebrew-tools"
-  version "1.0.6"
+  version "1.0.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ernesto27/req/releases/download/v1.0.6/req_Darwin_arm64.tar.gz"
-      sha256 "b3500eb0c8fc0b5e49bcffca4dc607c13095db7f0b33ae3df2672b5fa9f56f9c"
+      url "https://github.com/ernesto27/req/releases/download/v1.0.7/req_Darwin_arm64.tar.gz"
+      sha256 "7c9fab6d100ffbeeeb0f3d829ca8934038e5893fc8f48e5b4763b31a3eb78c79"
 
       def install
         bin.install "req"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ernesto27/req/releases/download/v1.0.6/req_Darwin_x86_64.tar.gz"
-      sha256 "5caa3f558f278d4dbd455a7c843a35113e28a1c6206b290a147f38931505f214"
+      url "https://github.com/ernesto27/req/releases/download/v1.0.7/req_Darwin_x86_64.tar.gz"
+      sha256 "f5c6be12aef89dbe0cb4c8fc1a46be01a0fa32b1d7436a780a33e6f08ec49d47"
 
       def install
         bin.install "req"
@@ -27,17 +27,17 @@ class Req < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ernesto27/req/releases/download/v1.0.6/req_Linux_x86_64.tar.gz"
-      sha256 "13f2dd0166e57ca4c2fe05225fcdba5a9534b7fd5cb6ebd4e9442d9b231329fc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ernesto27/req/releases/download/v1.0.7/req_Linux_arm64.tar.gz"
+      sha256 "2601ff93bc728a8ebb95d6af70c646734e5e3fa78648e11a17014240cab3529d"
 
       def install
         bin.install "req"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ernesto27/req/releases/download/v1.0.6/req_Linux_arm64.tar.gz"
-      sha256 "028dc1c9f5017797fbf82e6cafb2d0298cec2d154d66fe35d07d6d37e917a05e"
+    if Hardware::CPU.intel?
+      url "https://github.com/ernesto27/req/releases/download/v1.0.7/req_Linux_x86_64.tar.gz"
+      sha256 "d287079819eff76c727abd1013765d0102c3e1ee82230651b1268694f1323e8f"
 
       def install
         bin.install "req"
