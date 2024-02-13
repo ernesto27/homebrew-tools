@@ -5,20 +5,20 @@
 class Req < Formula
   desc ""
   homepage "https://github.com/ernesto27/homebrew-tools"
-  version "1.0.7"
+  version "1.0.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ernesto27/req/releases/download/v1.0.7/req_Darwin_arm64.tar.gz"
-      sha256 "7c9fab6d100ffbeeeb0f3d829ca8934038e5893fc8f48e5b4763b31a3eb78c79"
+      url "https://github.com/ernesto27/req/releases/download/v1.0.8/req_Darwin_arm64.tar.gz"
+      sha256 "a87dfcc31afb863220754bb497f130943952fc924a48d47afe33796b2ef1ffb8"
 
       def install
         bin.install "req"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ernesto27/req/releases/download/v1.0.7/req_Darwin_x86_64.tar.gz"
-      sha256 "f5c6be12aef89dbe0cb4c8fc1a46be01a0fa32b1d7436a780a33e6f08ec49d47"
+      url "https://github.com/ernesto27/req/releases/download/v1.0.8/req_Darwin_x86_64.tar.gz"
+      sha256 "47116b3e47ee6ad0f7bcee1db634221ebb89026dbf42c5bae8b021e3f06489b1"
 
       def install
         bin.install "req"
@@ -28,16 +28,16 @@ class Req < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ernesto27/req/releases/download/v1.0.7/req_Linux_arm64.tar.gz"
-      sha256 "2601ff93bc728a8ebb95d6af70c646734e5e3fa78648e11a17014240cab3529d"
+      url "https://github.com/ernesto27/req/releases/download/v1.0.8/req_Linux_arm64.tar.gz"
+      sha256 "ff93dcbff1bc143d41cb922a577d35a74400eeb471a7dee415f3e5ef8cad7db6"
 
       def install
         bin.install "req"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ernesto27/req/releases/download/v1.0.7/req_Linux_x86_64.tar.gz"
-      sha256 "d287079819eff76c727abd1013765d0102c3e1ee82230651b1268694f1323e8f"
+      url "https://github.com/ernesto27/req/releases/download/v1.0.8/req_Linux_x86_64.tar.gz"
+      sha256 "f7821bfbd6521431b9bff5bd2cbe6e518b6c683fc84763024f946a548bfde4d5"
 
       def install
         bin.install "req"
